@@ -1,0 +1,114 @@
+{
+  "platforms": [
+    {
+      "applicationKey": {
+        "version": "1.0.0",
+        "clientPlatform": "android",
+        "packageName": "com.demo.push.d"
+      },
+      "displayName": "SampleAppAndroid",
+      "scopeElementMapping": {
+        "push.mobileclient": "",
+        "liveupdate.mobileclient": ""
+      }
+    }
+  ],
+  "services": [
+    {
+      "name": "push",
+      "settings": {
+        "fcm": {
+          "apiKey": "AAAAGq1Fpbw:APA91bEjhjZLuFMC4hG46nJ4zbL7dyU-BHyNOFqfC_JVOx1JElg_1029_JwliDvYbcsoRe0lS4XOMjawCh09FhVY7-1DbKyjDJBzfuM2_cXOUjLSjnJ1rscqzV1muGJ3e938W17bQxgV2kZPM-nD0I7dNdh37o378A",
+          "senderId": "114576172476"
+        }
+      },
+      "tags": [
+        {
+          "name": "Tag1",
+          "description": "Abt Tag1"
+        },
+        {
+          "name": "Tag2",
+          "description": "Abt Tag2"
+        }
+      ]
+    },
+    {
+      "name": "liveupdate",
+      "schema": {
+        "features": {
+          "enableButton": {
+            "name": "enableButton",
+            "internalId": "enableButton",
+            "description": "Show the feature button",
+            "defaultValue": false
+          }
+        },
+        "properties": {
+          "titleColour": {
+            "name": "titleColour",
+            "internalId": "titleColour",
+            "description": "Change colour of the title",
+            "defaultValue": "black"
+          }
+        }
+      }
+    },
+    {
+      "name": "analytics"
+    }
+  ],
+  "adapters": [
+    {
+      "adapter": "TestAdapter",
+      "connectivity": {
+        "http": {
+          "connectionTimeoutInMilliseconds": 30000,
+          "cookiePolicy": "BEST_MATCH",
+          "dtdvalidationEnabled": false,
+          "maxConcurrentConnectionsPerNode": 49,
+          "maxRedirects": 11,
+          "port": 444,
+          "protocol": "http",
+          "socketTimeoutInMilliseconds": 30002
+        }
+      }
+    }
+  ],
+  "backendServices": [
+    {
+      "service": "resorts",
+      "baseUrl": "http://mybluemix.net/resorts",
+      "auth": {
+        "type": "basic",
+        "credential": {
+          "username": "user",
+          "password": "pass"
+        }
+      },
+      "ConnectionProperties": {
+        "maxConnetions": "50",
+        "connectionTimeoutInMilliseconds": "20000",
+        "socketTimeoutInMilliseconds": "20000"
+      }
+    }
+  ],
+  "confidentialClients": [
+    {
+      "id": "SampleClient",
+      "secret": "12345",
+      "allowedScope": "clients:read-public clients:read-protected update",
+      "displayName": "SampleClient"
+    }
+  ],
+  "appPublish": {
+    "android": {
+      "release": {
+        "keystore": "dab-android.keystore",
+        "storePassword": "mfp123",
+        "alias": "dab-key",
+        "password": "mfp123"
+      }
+    }
+  }
+}

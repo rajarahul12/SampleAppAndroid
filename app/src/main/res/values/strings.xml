@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+  <string name="app_name">SampleAppAndroid</string>
+  <string name="ping_mobilefirst_txt">Ping MobileFirst Server</string>
+  <string name="hello_mobilefirst_txt">Hello MobileFirst</string>
+</resources>
